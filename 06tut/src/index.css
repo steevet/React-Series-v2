@@ -1,0 +1,129 @@
+/* In CSS, the asterisk (*) is a universal selector that matches any element on the page. When used in combination with curly braces {}, 
+like * { ... }, it represents a CSS rule that applies to all elements in the document. 
+The * selector targets every single element, regardless of its type or location within the HTML structure.*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* By targeting the html element, you can establish global styles and properties that affect the entire HTML document.  */
+html {
+  font-size: 22px;
+}
+
+/* In CSS, body refers to the <body> element of an HTML document. 
+The <body> element represents the main content of the web page and typically contains all the visible content, such as text, images, links, and other elements. 
+By targeting the body element, you can apply styles that specifically affect the main content area of your webpage.*/
+body {
+  min-height: 100vh;
+  font-family: 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* In CSS, the display property is used to control the layout behavior of an element. 
+It determines how an element is rendered and how it interacts with other elements on the page. */
+/* flex: This value establishes a flex container and enables flexbox layout. 
+It allows you to easily create flexible and responsive layouts by distributing space among child elements. */
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 800px; 
+  width: 100%; 
+  max-width: 500px;
+  border: 1px solid mediumblue;
+  margin: auto;
+}
+
+header {
+  width: 100%;
+  padding: 0 0.25em;
+  background-color: mediumblue;
+  color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: auto;
+}
+
+footer {
+  width: 100%;
+  padding: 0.25em;
+  background-color: mediumblue;
+  color: aliceblue;
+  display: grid;
+  place-content: center;
+}
+
+ul {
+  width: 100%;
+  list-style: none;
+  padding: 0 0.25rem 0.25rem;
+}
+
+ul li::before {
+  content: "\200B";
+}
+
+.item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  margin: 0.25rem 0;
+  background-color: #eee;
+}
+
+.item:first-child {
+  margin: 0;
+}
+
+.item input[type="checkbox"] {
+  text-align: center;
+  width: 2.5rem;
+  width: 48px;
+  min-width: 48px;
+  height: 2.5rem;
+  height: 48px;
+  min-height: 48px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.item input[type="checkbox"]:focus + label {
+  text-decoration: underline;
+}
+
+.item > label {
+  font-size: 0.75rem;
+  flex-grow: 1;
+}
+
+.item svg {
+  width: 48px;
+  min-width: 48px;
+  height: 36px;
+  font-size: 1rem;
+  color: steelblue;
+  cursor: pointer;
+}
+
+.item svg:focus, 
+.item svg:hover {
+  color: red;
+  outline: none;
+}
